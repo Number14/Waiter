@@ -6,16 +6,22 @@ namespace Waiter
     public class Timeouter
     {
         private TimeSpan timeout;
+        private readonly ManualResetEventSlim waiter;
 
         public Timeouter(TimeSpan timeout)
         {
             this.timeout = timeout;
+            waiter = new ManualResetEventSlim();            
         }
 
         public bool Wait()
         {
-            var waiter = new ManualResetEventSlim();
             return waiter.Wait(timeout);
+        }
+
+        public void Trigger()
+        {
+            waiter.Set();
         }
     }
 }
