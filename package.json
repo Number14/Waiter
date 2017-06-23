@@ -1,0 +1,28 @@
+{
+  "name": "waiter",
+  "version": "1.0.0",
+  "description": "Add stuff here",
+  "author": "Patrik Herrgård",
+  "license": "MIT",
+  "dependencies": {
+    "gulp-bump": "^2.7.0",
+    "gulp-debug": "^3.1.0",
+    "gulp-dotnet-assembly-info": "^0.1.12",
+    "gulp-rename": "^1.2.2",
+    "gulp-shell": "^0.6.3",
+    "yargs": "^8.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Number14/Waiter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Number14/Waiter/issues"
+  },
+  "homepage": "https://github.com/Number14/Waiter#readme",
+  "devDependencies": {
+    "eslint": "^4.0.0",
+    "gulp": "^3.9.1",
+    "gulp-dotnet-cli": "^0.4.0"
+  }
+}

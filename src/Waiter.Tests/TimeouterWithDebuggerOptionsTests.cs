@@ -2,6 +2,7 @@
 using System;
 using System.Diagnostics;
 using System.Threading;
+using Shouldly;
 using Xunit;
 
 namespace Waiter.Tests
@@ -24,6 +25,8 @@ namespace Waiter.Tests
             sut.Wait(cancellationTokenSource.Token);
 
             cancellationTokenSource.CancelAfter(1100);
+
+            sut.HasTriggered.ShouldBe(true);
         }
     }
 }
