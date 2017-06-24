@@ -1,0 +1,11 @@
+version: '{build}'
+build_script:
+ - npm install -g gulp
+ - npm install
+ - gulp --mode Release
+ test: off
+ assembly_info:
+  patch: true
+  file: AssemblyVersion.cs
+  assembly_version: '{version}'
+  assembly_file_version: '{version}'
