@@ -1,12 +1,14 @@
-"use strict"
+'use strict';
 
-let gulp = require('gulp');
-let { restore, build, test, pack, publish } = require('gulp-dotnet-cli');
-let args = require('yargs').argv;
-let fs = require('fs');
+import gulp from 'gulp';
+import { restore, build, test, pack, publish } from 'gulp-dotnet-cli';
+import yargs from 'yargs';
+import fs from 'fs';
 
-let project = JSON.parse(fs.readFileSync("./package.json"));
-let configuration = args.mode || "Debug";
+const args = yargs.argv;
+
+const project = JSON.parse(fs.readFileSync("./package.json"));
+const configuration = args.mode || "Debug";
 
 gulp.task('restore', () => {
     return gulp.src('**/*.sln', { read: false })
