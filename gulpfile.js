@@ -1,3 +1,5 @@
+"use strict"
+
 let gulp = require('gulp');
 let { restore, build, test, pack, publish } = require('gulp-dotnet-cli');
 let args = require('yargs').argv;
