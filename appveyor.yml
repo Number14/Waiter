@@ -1,5 +1,5 @@
 version: '{build}'
-install::
+install:
   - ps: Install-Product node ''
   - npm install -g gulp
   - npm install
