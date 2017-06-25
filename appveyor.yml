@@ -1,7 +1,7 @@
 version: '{build}'
 build_script:
-- node -version
-- npm -version
+- node --version
+- npm --version
 - npm install -g gulp
 - npm install
 - gulp --mode Release
