@@ -18,7 +18,7 @@ namespace Waiter.Tests
         [Fact]
         public void ShouldOverrideGivenTimeoutWithGivenOptionsWhenDebuggerIsAttached()
         {
-            Debugger.Launch();
+            // Debugger.Launch();
 
             var cancellationTokenSource = new CancellationTokenSource();
             
