@@ -1,11 +1,10 @@
 'use strict';
 
-import gulp from 'gulp';
-import { restore, build, test, pack, publish } from 'gulp-dotnet-cli';
-import yargs from 'yargs';
-import fs from 'fs';
+const gulp = require('gulp');
+const { restore, build, test, pack, publish } = require('gulp-dotnet-cli');
+const args = require('yargs').argv;
+const fs = require('fs');
 
-const args = yargs.argv;
 
 const project = JSON.parse(fs.readFileSync("./package.json"));
 const configuration = args.mode || "Debug";
